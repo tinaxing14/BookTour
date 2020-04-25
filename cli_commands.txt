@@ -1,0 +1,11 @@
+cd ~
+touch .gitignore cli_commands.txt directory.txt package.json schema.json webpack.config.js
+
+
+mkdir client && cd $_ && mkdir dist src && cd dist && touch index.html style.css && cd ../src && touch index.jsx && mkdir components && cd $_ && touch App.jsx && cd ../../..
+
+
+mkdir server && cd $_ && touch controller.js index.js middleware.js && cd ..
+
+
+mkdir db && cd $_ && touch config.js configExample.js handlers.js index.js model.js && cd ..
