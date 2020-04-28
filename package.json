@@ -2,7 +2,7 @@
   "name": "webpack-setup",
   "version": "1.0.0",
   "description": "",
-  "author": "Alec Leong <leongalec@gmail.com>",
+  "author": "name <email>",
   "license": "UNLICENSED",
   "scripts": {
     "react-dev": "webpack -d --watch",
