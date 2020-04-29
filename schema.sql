@@ -45,4 +45,8 @@ INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 202
 INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200612, 20, 199);
 INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200613, 20, 199);
 INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200614, 20, 199);
-INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200615, 20, 199);
+INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200615, 40, 169);
+INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200616, 40, 169);
+INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200617, 40, 169);
+INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200618, 40, 169);
+INSERT INTO prices (trip_id, trip_date, trip_availability, price) VALUES (1, 20200619, 40, 169);
