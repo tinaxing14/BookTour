@@ -1,0 +1,141 @@
+.body{
+    background-color: blanchedalmond;
+    font-family: Arial,sans-serif!important;
+    font-size: medium;
+}
+
+.tourplanner{
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid #078171;
+    width: 30%;
+    min-height: 50%;
+    height: auto;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 16px;
+    display: grid;
+    grid-template-rows:30% 70% ;
+}
+
+.dateheader {
+    border: 1px solid #e0e0e0;
+}
+
+/* .plancalendar {
+    border: 1px solid #e0e0e0;
+} */
+
+.tourfooter {
+    border: 1px solid #e0e0e0;
+}
+
+.selectheader_header {
+    display:flex;
+    align-items: stretch;
+    flex-direction: column;
+    margin:0;
+    padding:0;
+    height:100%;
+    justify-content: center;
+}
+
+.header_price {
+    height:50%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.select_date_and_travelers{
+    margin-top: 4px;
+    font-weight: 700;
+    color: #000a12;
+    padding-left: 1.5em;
+
+}
+
+.from_rate {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding-left: 8px;
+    padding-right: 10px;
+}
+
+.from {
+    text-align: right;
+    color: #4a4a4a;
+    font-size: 12px;
+    line-height: 16px;
+}
+.rate{
+    color:#000a12;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.header_dates_adults_options {
+    height:40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1.5em 0px 1.5em 0px;
+
+
+}
+.dates{
+    cursor:pointer;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 700;
+    flex-grow: 1;
+    margin: 0 4px;
+    flex-basis: 50%;
+    vertical-align: center;
+    text-align: center;
+}
+.adults{
+    cursor:pointer;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 700;
+    flex-grow: 1;
+    margin: 0 4px;
+    flex-basis: 50%;
+    vertical-align: center;
+    text-align: center;
+}
+.options{
+    cursor:pointer;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 50px;
+    font-weight: 700;
+    flex-grow: 1;
+    margin: 0 4px;
+    flex-basis: 50%;
+    vertical-align: center;
+    text-align: center;
+    
+}
+
+.planfooter{
+
+}
+
+.planfooter_updatebtn{
+
+}
+.planfooter_cancelation{
+
+}
+.planfooter_popularity{
+    
+}
+
+
