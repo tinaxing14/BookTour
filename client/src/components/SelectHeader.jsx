@@ -20,9 +20,9 @@ class SelectHeader extends React.Component {
           </div>
         </div>
         <div className="header_dates_adults_options">
-          <div className="header_dates_adults_options_btn dates"><i class="gg-calendar-dates"></i>Aug 20</div>
-          <div className="header_dates_adults_options_btn adults"><i class="gg-user-add"></i>2 adults</div>
-          <div className="header_dates_adults_options_btn options"><i class="gg-awards"></i>Options</div>
+          <div className="header_dates_adults_options_btn dates"><div class="gg-calendar-dates icons"></div>Aug 20</div>
+          <div className="header_dates_adults_options_btn adults"><div class="gg-user-add icons"></div>2 adults</div>
+          <div className="header_dates_adults_options_btn options"><div class="gg-awards icons"></div>Options</div>
         </div>
       </div>
     );

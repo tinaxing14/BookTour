@@ -94,6 +94,12 @@
     vertical-align: center;
     text-align: center;
     border-radius: 5px;
+    display:flex;
+}
+
+.icons{
+    margin: 10px 15px 0px 15px;
+
 }
 
 .planfooter{
