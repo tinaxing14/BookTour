@@ -1,0 +1,54 @@
+{
+  "name": "webpack-setup",
+  "version": "1.0.0",
+  "description": "",
+  "author": "name <email>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "react-dev": "webpack -d --watch",
+    "start": "nodemon server/index.js",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest --coverage --colors"
+  },
+
+  "husky":{
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "enzyme": "^3.11.0",
+    "express": "^4.17.1",
+    "jest": "^25.5.2",
+    "mongoose": "^5.9.10",
+    "morgan": "^1.10.0",
+    "path": "^0.12.7",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "underscore": "^1.10.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "babel-core": "^6.23.1",
+    "babel-jest": "^25.5.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.23.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
+    "jest-enzyme": "^7.1.2",
+    "webpack": "^2.2.1",
+    "husky": "^4.2.5"
+  }
+}
