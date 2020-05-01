@@ -12,13 +12,13 @@ class PlanFooter extends React.Component {
       <div className="planfooter">
         <div className="planfooter_updatebtn">Update</div>
         <div className="planfooter_cancelation">
-            <div></div>
-            <div></div>
+            <div className="cancelation_btn">Free Cancelation</div>
+            <div className="cancelation_term">Risk free 100% refund if you cancel by Aug 18</div>
         </div>
         <div className="planfooter_popularity">
-            <div></div>
-            <div></div>
-            <div></div>
+            <div className="popularity_number">Popular: Booked by 3059 travelers</div>
+            <div className="popularity_lowprice"></div>
+            <div className="popularity_fee"></div>
         </div>
       </div>
     );

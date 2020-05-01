@@ -18,17 +18,11 @@
     grid-template-rows:30% 70% ;
 }
 
-.dateheader {
-    border: 1px solid #e0e0e0;
-}
 
 /* .plancalendar {
     border: 1px solid #e0e0e0;
 } */
 
-.tourfooter {
-    border: 1px solid #e0e0e0;
-}
 
 .selectheader_header {
     display:flex;
@@ -87,7 +81,8 @@
 
 
 }
-.dates{
+
+.header_dates_adults_options_btn{
     cursor:pointer;
     border: 1px solid #e0e0e0;
     font-size: 14px;
@@ -98,38 +93,17 @@
     flex-basis: 50%;
     vertical-align: center;
     text-align: center;
-}
-.adults{
-    cursor:pointer;
-    border: 1px solid #e0e0e0;
-    font-size: 14px;
-    line-height: 40px;
-    font-weight: 700;
-    flex-grow: 1;
-    margin: 0 4px;
-    flex-basis: 50%;
-    vertical-align: center;
-    text-align: center;
-}
-.options{
-    cursor:pointer;
-    border: 1px solid #e0e0e0;
-    font-size: 14px;
-    line-height: 40px;
-    font-weight: 700;
-    flex-grow: 1;
-    margin: 0 4px;
-    flex-basis: 50%;
-    vertical-align: center;
-    text-align: center;
-    
+    border-radius: 5px;
 }
 
 .planfooter{
     display:flex;
     flex-direction: column;
-    align-items: flex-start;
     margin-bottom: 12px;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 0px 1em 0px 1em;
+
 }
 
 .planfooter_updatebtn{
@@ -138,22 +112,65 @@
     position: relative;
     font-weight: 700;
     font-size: 14px;
-    line-height: 18px;
+    line-height: 23px;
     padding: 8px 16px;
     text-align: center;
     background-color: #f2b203;
     border-color: #f2b203;
     border-radius: 12px;
     display: block;
+    height:25px;
+    
 }
 .planfooter_cancelation{
     display:flex;
     align-items: center;
-    margin-bottom: 4px;
+    margin:10px 0px 0px 1em;
+
 }
+
+.cancelation_btn{
+    background-color: #d33c12;
+    border-radius: 4px;
+    color:#fff;
+    height:25px;
+    width: 120px;
+    font-size: small;
+    text-align: center;
+    line-height: 25px;
+}
+
+.cancelation_term{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color:#2c2c2c;
+    margin-left:10px;
+    
+}
+
 .planfooter_popularity{
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 8px 0px 0px 1em;
+    
+   
+}
 
+.popularity_number{
+    margin-top: 2px;
+    font-weight: 700;
+    color: #d33c12;
+    font-size: 14px;
+    
 }
 
 
+.popularity_lowprice{
+
+}
+
+.popularity_fee{
+
+}

@@ -11,6 +11,13 @@
     "test-watch": "jest --watch",
     "test-coverage": "jest --coverage --colors"
   },
+
+  "husky":{
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+
   "dependencies": {
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
@@ -41,6 +48,7 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
     "jest-enzyme": "^7.1.2",
-    "webpack": "^2.2.1"
+    "webpack": "^2.2.1",
+    "husky": "^4.2.5"
   }
 }
