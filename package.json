@@ -9,7 +9,9 @@
     "start": "nodemon server/index.js",
     "test": "jest",
     "test-watch": "jest --watch",
-    "test-coverage": "jest --coverage --colors"
+    "test-coverage": "jest --coverage --colors",
+    "seed": "mysql -u root -p <schema.sql",
+    "DBseed": "db/node dbseed.js"
   },
   "husky": {
     "hooks": {
