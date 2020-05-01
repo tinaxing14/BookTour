@@ -24,6 +24,7 @@ module.exports = {
   ],
   rules: {
     "linebreak-style": 0,
+    "import/extensions": 0,
   },
-  "import/extensions":['error', 'always', {ignorePackages: true} ],
+  
 };

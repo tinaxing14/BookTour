@@ -11,13 +11,11 @@
     "test-watch": "jest --watch",
     "test-coverage": "jest --coverage --colors"
   },
-
-  "husky":{
+  "husky": {
     "hooks": {
       "pre-commit": "npm run test"
     }
   },
-
   "dependencies": {
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
@@ -27,6 +25,7 @@
     "jest": "^25.5.2",
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
     "path": "^0.12.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
