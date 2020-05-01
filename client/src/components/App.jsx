@@ -1,4 +1,3 @@
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import Calendar from './Calendar.jsx';
 import SelectHeader from './SelectHeader.jsx';
@@ -8,7 +7,6 @@ class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-
       showCalendar: false,
     };
   }
@@ -25,5 +23,4 @@ class App extends React.Component {
   }
 
 }
-
 export default App;

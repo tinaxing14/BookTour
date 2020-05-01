@@ -153,9 +153,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 8px 0px 0px 1em;
-    
-   
+    margin: 8px 0px 0px 1em;  
 }
 
 .popularity_number{
@@ -163,14 +161,28 @@
     font-weight: 700;
     color: #d33c12;
     font-size: 14px;
-    
 }
 
 
 .popularity_lowprice{
-
+    font-size: 12px;
+    line-height: 16px;
+    color: #4a4a4a;
+    margin-left: 15px;
+    cursor: pointer;
 }
 
-.popularity_fee{
-
+.checkicon {
+    margin-top: 3px;
+    color:#2c2c2c;
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    border-bottom: solid 1.5px currentColor;
+    border-left: solid 1.5px currentColor;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
 }
+
+
+

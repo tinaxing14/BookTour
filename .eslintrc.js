@@ -23,6 +23,7 @@ module.exports = {
     'react',
   ],
   rules: {
+    "linebreak-style": 0,
   },
   "import/extensions":['error', 'always', {ignorePackages: true} ],
 };
