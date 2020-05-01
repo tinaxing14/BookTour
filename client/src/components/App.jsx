@@ -1,15 +1,17 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import Calendar from './Calendar.jsx';
 import SelectHeader from './SelectHeader.jsx';
 import PlanFooter from './PlanFooter.jsx';
-class App extends React.Component {
 
+class App extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       showCalendar: false,
     };
   }
+
   render() {
     return (
       <div id="desktop_tour_planner" className="tourplanner">
@@ -19,9 +21,8 @@ class App extends React.Component {
           : null }
         <div id="tour_plan_footer" className="tourfooter"><PlanFooter /></div>
       </div>
-    )
+    );
   }
-
 }
 
-export default App;  
+export default App;
