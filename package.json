@@ -1,8 +1,8 @@
 {
   "name": "webpack-setup",
   "version": "1.0.0",
-  "description": "",
-  "author": "name <email>",
+  "description": "Tripadvisor mock webpage project",
+  "author": "Tina Xing",
   "license": "UNLICENSED",
   "scripts": {
     "react-dev": "webpack -d --watch",
