@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+import 'babel-polyfill';
+
 const {
   configure, shallow, render, mount,
 } = require('enzyme');

@@ -24,9 +24,7 @@ module.exports = {
   coverageDirectory: 'coverage',
 
   // An array of regexp pattern strings used to skip coverage collection
-  // coveragePathIgnorePatterns: [
-  //   "/node_modules/"
-  // ],
+  coveragePathIgnorePatterns: ['<rootDir>/db/index.js', '<rootDir>/db/config.js, dbseed.js'],
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [
@@ -110,7 +108,7 @@ module.exports = {
 
   // The paths to modules that run some code to configure
   // or set up the testing environment before each test
-  setupFiles: ['./__mocks__/dom.js'],
+  setupFiles: ['./__mocks__/dom.js', './jest-setup.js'],
 
   // A list of paths to modules that run some code to configure or set up the testing
   // framework before each test
@@ -154,6 +152,7 @@ module.exports = {
   transform: {
     '^.+\\.js$': 'babel-jest',
     '^.+\\.jsx$': 'babel-jest',
+
   },
 
   // Indicates whether each individual test should be reported during the run
