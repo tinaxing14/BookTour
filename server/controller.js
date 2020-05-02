@@ -1,4 +1,5 @@
 const model = require('../db/model.js');
+const { formatDate } = require('./helpers.js')
 
 module.exports = {
   getPrice: (req, res) => {
@@ -9,14 +10,10 @@ module.exports = {
   },
 
   getTripData: (req, res) => {
-    //get the current date in "20200501" format
-    const today = new Date();
-    const year = today.getFullYear().toString();
-    const month = (today.getMonth() + 1).toString().padStart(2, 0);
-    const day = today.getDate().toString().padStart(2, 0);
-    const date = year + month + day + date;
     const tripId = req.params.id;
-
+    const today = new Date();
+    today = formatDate(today);
+    
     model.fetchCurrentTrip(date, tripId, (err, results) => {
       if (err) {
         res.status(500).end()
