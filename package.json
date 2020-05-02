@@ -12,12 +12,12 @@
     "test-coverage": "jest --coverage --colors",
     "seed": "mysql -u root -p <schema.sql && node db/dbseed"
   },
-
   "dependencies": {
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "body-parser": "^1.19.0",
     "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
     "jest": "^25.5.2",
     "mongoose": "^5.9.10",
@@ -36,7 +36,6 @@
     "babel-loader": "^6.3.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.23.0",
-    "enzyme-adapter-react-16": "^1.15.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-plugin-import": "^2.20.2",
@@ -48,4 +47,3 @@
     "webpack": "^2.2.1"
   }
 }
-
