@@ -20,6 +20,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
     "jest": "^25.5.2",
+    "jsdom": "^16.2.2",
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
