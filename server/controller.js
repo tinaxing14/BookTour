@@ -17,8 +17,7 @@ module.exports = {
 
   getTripData: (req, res) => {
     const tripId = req.params.id;
-    let today = new Date();
-    today = formatDate(today);
+    const today = formatDate();
 
     model.fetchCurrentTrip(today, tripId, (err, results) => {
       if (err) {
