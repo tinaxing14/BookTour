@@ -18,18 +18,25 @@ let i = 100;
 
 const promiseArr = [];
 
+let randomThingsTodo;
+let description;
+let duration;
+let cancelation;
+let totalbooked;
+let sql;
+
 while (i > 0) {
-  const randomThingsTodo = thingsToDo[_.random(0, 3)] + location[_.random(0, 4)];
+  randomThingsTodo = thingsToDo[_.random(0, 3)] + location[_.random(0, 4)];
 
-  const description = `${departure[_.random(0, 2)]} Departure - ${randomThingsTodo} pick up included!`;
+  description = `${departure[_.random(0, 2)]} Departure - ${randomThingsTodo} pick up included!`;
 
-  const duration = `${departure[_.random(0, 2)]} Departure - ${arrival[_.random(0, 2)]}`;
+  duration = `${departure[_.random(0, 2)]} Departure - ${arrival[_.random(0, 2)]}`;
 
-  const cancelation = ['24', '48', '72'][_.random(0, 2)];
+  cancelation = ['24', '48', '72'][_.random(0, 2)];
 
-  const totalbooked = _.random(2000, 3000);
+  totalbooked = _.random(2000, 3000);
 
-  const sql = `insert into trips (tripname, detail, duration, cancelation, totalbooked) VALUES ("${randomThingsTodo}","${description}","${duration}","${cancelation}","${totalbooked}")`;
+  sql = `insert into trips (tripname, detail, duration, cancelation, totalbooked) VALUES ("${randomThingsTodo}","${description}","${duration}","${cancelation}","${totalbooked}")`;
 
   const promises = DB.queryAsync(sql);
   // mysql connection is promisified in DB index.js file, put queries into promiseArr
@@ -46,3 +53,5 @@ Promise.all(promiseArr)
   .catch((err) => {
     console.log(err);
   });
+
+module.exports = sql;
