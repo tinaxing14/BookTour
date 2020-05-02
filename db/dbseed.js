@@ -1,44 +1,16 @@
 /* eslint-disable no-console */
-const _ = require('underscore');
 
 const Promise = require('bluebird');
 
 const DB = require('./index.js');
 
-const thingsToDo = ['a day trip at ', 'a nice day trip at ', 'explore the beautiful ', 'a full day trip at '];
-
-const location = ['Chengdu', 'Macau', 'Philadelphia', 'Boston', 'Washington DC', 'Yosemite', 'Yellowstone', 'Arches'];
-
-const departure = ['6:00 am', '7:00 am', '8:00 am'];
-
-const arrival = ['7:00pm', '5:00pm', '4:00pm'];
-
-
-let i = 100;
+const generateRandomQuery = require('./seedhelper.js')
 
 const promiseArr = [];
-
-let randomThingsTodo;
-let description;
-let duration;
-let cancelation;
-let totalbooked;
-let sql;
-
+let i = 100;
 while (i > 0) {
-  randomThingsTodo = thingsToDo[_.random(0, 3)] + location[_.random(0, 4)];
 
-  description = `${departure[_.random(0, 2)]} Departure - ${randomThingsTodo} pick up included!`;
-
-  duration = `${departure[_.random(0, 2)]} Departure - ${arrival[_.random(0, 2)]}`;
-
-  cancelation = ['24', '48', '72'][_.random(0, 2)];
-
-  totalbooked = _.random(2000, 3000);
-
-  sql = `insert into trips (tripname, detail, duration, cancelation, totalbooked) VALUES ("${randomThingsTodo}","${description}","${duration}","${cancelation}","${totalbooked}")`;
-
-  const promises = DB.queryAsync(sql);
+  const promises = DB.queryAsync(generateRandomQuery());
   // mysql connection is promisified in DB index.js file, put queries into promiseArr
   // to resolve the promises together and then show the data insertion complete message to the user.
   promiseArr.push(promises);
@@ -53,5 +25,3 @@ Promise.all(promiseArr)
   .catch((err) => {
     console.log(err);
   });
-
-module.exports = sql;
