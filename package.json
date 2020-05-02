@@ -10,8 +10,7 @@
     "test": "jest",
     "test-watch": "jest --watch",
     "test-coverage": "jest --coverage --colors",
-    "seed": "mysql -u root -p <schema.sql",
-    "DBseed": "node db/dbseed.js"
+    "seed": "mysql -u root -p <schema.sql && node db/dbseed"
   },
 
   "dependencies": {
