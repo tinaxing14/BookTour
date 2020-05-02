@@ -13,11 +13,6 @@
     "seed": "mysql -u root -p <schema.sql",
     "DBseed": "node/db dbseed.js"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test"
-    }
-  },
   "dependencies": {
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
@@ -53,3 +48,4 @@
     "webpack": "^2.2.1"
   }
 }
+
