@@ -13,7 +13,10 @@ app.listen(PORT, () => console.log(`\x1b[32m Server listening on PORT\x1b[36m ${
 // logger
 app.use(morgan('tiny'));
 
+// request body parser
 app.use(express.json());
+app.use(express.urlencoded());
+
 
 // serving static file
 app.use(express.static(path.join(__dirname, '../client/dist')));
