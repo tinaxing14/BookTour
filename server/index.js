@@ -21,4 +21,4 @@ app.use(express.urlencoded());
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
 // use router to route the requests to same path
-app.use('/api/trip/:id', router);
+app.use('/api/trip', router);
