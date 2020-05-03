@@ -3,7 +3,7 @@ const { getPrice, getTripData } = require('./controller.js');
 
 const router = express.Router();
 
-router.get('/price', getTripData);
-router.get('/calendar', getPrice);
+router.get('/:id/price', getTripData);
+router.get('/:id/calendar', getPrice);
 
 module.exports = router;

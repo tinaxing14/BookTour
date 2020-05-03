@@ -3,10 +3,9 @@ const { formatDate } = require('./helpers.js');
 
 module.exports = {
   getPrice: (req, res) => {
-    const { adults, date } = req.query;
+    const { adults, startdate } = req.query;
     const tripId = req.params.id;
-
-    model.fetchTripData(date, adults, tripId, (err, results) => {
+    model.fetchTripData(startdate, tripId, adults, (err, results) => {
       if (err) {
         res.status(500).end();
       } else {
@@ -18,7 +17,6 @@ module.exports = {
   getTripData: (req, res) => {
     const tripId = req.params.id;
     const today = formatDate();
-
     model.fetchCurrentTrip(today, tripId, (err, results) => {
       if (err) {
         res.status(500).end();
