@@ -29,7 +29,9 @@ describe('Check controller getTripdata method', () => {
       const res = mockResponse();
       await controller.getTripDataAsync(req, res);
       expect(res.json).toHaveBeenCalled();
-      expect(res.json.mock.value[0].toHaveProperty('tripname', 'detail', 'duration', 'cancelation', 'totalbooked', 'price', 'trip_availability'));
+      expect(res.json).toHaveBeenCalledWith([{
+        tripname: 'Yosemite in a Day', detail: '6:00 am Departure - Yosemite in a Day Tour from San Francisco\nPickup included', duration: '6:00 am Departure - 6:00 AM', cancelation: 24, totalbooked: 3987, price: 199, trip_availability: 20,
+      }]);
     } catch (err) {
       console.log(err);
     }
@@ -40,7 +42,7 @@ describe('Check controller getTripdata method', () => {
       req.params.id = null;
       const res = mockResponse();
       await controller.getTripDataAsync(req, res);
-      expect(res.json).toHaveNotBeenCalled();
+      expect(res.json).toHaveBeenCalledTimes(0);
       expect(res.status).toHaveBeenCalledWith(500);
     } catch (err) {
       console.log(err);
@@ -53,13 +55,14 @@ describe('Check controller getPrice method', () => {
     try {
       const req = mockRequest();
       req.params.id = '1';
-      req.query.startdate = '2020';
+      req.query.startdate = '20200515';
       req.query.adults = '2';
       const res = mockResponse();
       await controller.getPriceAsync(req, res);
       expect(res.json).toHaveBeenCalled();
-      expect(res.json).toHaveBeenCalled();
-      expect(res.json.mock.value[0].toHaveProperty('tripname', 'detail', 'duration', 'cancelation', 'totalbooked', 'price', 'trip_availability'));
+      expect(res.json).toHaveBeenCalledWith([{
+        tripname: 'Yosemite in a Day', detail: '6:00 am Departure - Yosemite in a Day Tour from San Francisco\nPickup included', duration: '6:00 am Departure - 6:00 AM', cancelation: 24, totalbooked: 3987, price: 169, trip_availability: 40,
+      }]);
     } catch (err) {
       console.log(err);
     }
@@ -72,7 +75,7 @@ describe('Check controller getPrice method', () => {
       req.query.adults = '2';
       const res = mockResponse();
       await controller.getPriceAsync(req, res);
-      expect(res.json).toHaveNotBeenCalled();
+      expect(res.json).toHaveBeenCalledTimes(0);
       expect(res.status).toHaveBeenCalledWith(500);
     } catch (err) {
       console.log(err);
