@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../styles/SelectHeader.css';
 
 class SelectHeader extends React.Component {
   constructor(props) {
@@ -9,29 +10,29 @@ class SelectHeader extends React.Component {
 
   render() {
     return (
-      <div className="selectheader_header">
-        <div className="header_price">
-          <div className="select_date_and_travelers">Select Date and Travelers</div>
-          <div className="from_rate">
-            <div className="from">
+      <div className={styles.header}>
+        <div className={styles.header_price}>
+          <div className={styles.date_travelers}>Select Date and Travelers</div>
+          <div className={styles.from_rate}>
+            <div className={styles.from}>
               From
             </div>
-            <div className="rate">
+            <div className={styles.rate}>
               $199
             </div>
           </div>
         </div>
-        <div className="header_dates_adults_options">
-          <div className="header_dates_adults_options_btn dates">
-            <div className="gg-calendar-dates icons" />
+        <div className={styles.dates_adults_options}>
+          <div className={styles.dates_adults_options_btn}>
+            <div className={`gg-calendar-dates ${styles.icons}`} />
             Aug 20
           </div>
-          <div className="header_dates_adults_options_btn adults">
-            <div className="gg-user-add icons" />
+          <div className={styles.dates_adults_options_btn}>
+            <div className={`gg-user-add ${styles.icons}`} />
             2 adults
           </div>
-          <div className="header_dates_adults_options_btn options">
-            <div className="gg-awards icons" />
+          <div className={styles.dates_adults_options_btn}>
+            <div className={`gg-awards ${styles.icons}`} />
             Options
           </div>
         </div>

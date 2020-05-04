@@ -1,8 +1,10 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
+import styles from '../styles/App.css';
 import Calendar from './Calendar.jsx';
 import SelectHeader from './SelectHeader.jsx';
 import PlanFooter from './PlanFooter.jsx';
+
 
 class App extends React.Component {
   constructor(props) {
@@ -14,12 +16,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div id="desktop_tour_planner" className="tourplanner">
-        <div id="select_date_header" className="dateheader"><SelectHeader /></div>
-        {this.state.showCalendar
-          ? <div id="tour_plan_calendar" className="plancanlendar"><Calendar /></div>
-          : null }
-        <div id="tour_plan_footer" className="tourfooter"><PlanFooter /></div>
+      <div className={styles.body}>
+        <div id="desktop_tour_planner" className={styles.tourplanner}>
+          <div id="select_date_header" className="dateheader"><SelectHeader /></div>
+          {this.state.showCalendar
+            ? <div id="tour_plan_calendar" className="plancanlendar"><Calendar /></div>
+            : null }
+          <div id="tour_plan_footer" className="tourfooter"><PlanFooter /></div>
+        </div>
       </div>
     );
   }
