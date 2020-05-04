@@ -1,0 +1,18 @@
+.body{
+    font-family: Arial,sans-serif!important;
+    font-size: medium;
+}
+
+.tourplanner{
+    border: 1px solid #e0e0e0;
+    border-top: 4px solid #078171;
+    width: 30%;
+    min-height: 50%;
+    height: auto;
+    background: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-left: 16px;
+    display: grid;
+    grid-template-rows:30% 70% ;
+}
