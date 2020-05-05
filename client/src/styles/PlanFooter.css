@@ -23,7 +23,12 @@
     border-radius: 12px;
     display: block;
     height:25px;
+    margin:0% 2% 0% 2%;
     
+}
+
+.updatebtn:hover {
+    background-color: #f0c757;
 }
 .cancelation{
     display:flex;
@@ -56,7 +61,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 8px 0px 0px 1em;  
+    margin:1% 2% 2% 2.5%;
+    padding:1%;
 }
 
 .popularity_number{

@@ -11,7 +11,7 @@
 }
 
 .header_price {
-    height:50%;
+    height:60%;
     display:flex;
     flex-direction: row;
     justify-content: space-between;
@@ -23,7 +23,7 @@
     font-weight: 700;
     color: #000a12;
     padding-left: 1em;
-    font-size:25px;
+    font-size:22px;
 
 }
 
@@ -33,6 +33,7 @@
     text-align: right;
     padding-left: 8px;
     padding-right: 10px;
+    margin-top:2%;
 }
 
 .from {
@@ -56,6 +57,10 @@
     margin: 1.5em 1em 1.5em 1em;
 
 
+}
+
+.dates_adults_options_btn:hover {
+  background-color: #f3f1f1
 }
 
 .dates_adults_options_btn{
