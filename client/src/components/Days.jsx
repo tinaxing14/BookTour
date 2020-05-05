@@ -20,7 +20,7 @@ class Days extends React.Component {
 
   render() {
   const weekDays = ['S', 'M', 'T', 'W', 'T', 'F', 'S',];
-  const weeks = getWeeksForMonth(6, 2020);
+  const weeks = getWeeksForMonth(...this.props.monthYear);
   const weekDaysMarkup = weekDays.map(weekday => <div className={styles.days} key={weekday}>{weekday}</div>);
   const weeksMarkup = weeks.map((week ,index) => {
       return (

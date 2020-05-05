@@ -7,18 +7,22 @@ import Calendar from './Calendar.jsx';
 import SelectHeader from './SelectHeader.jsx';
 import PlanFooter from './PlanFooter.jsx';
 import http from '../helpers/http.js';
+import date from '../helpers/getDate.js';
 
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showCalendar: true,
-      // store the trip info in App component as it is rendered in both header and footer component
+      showCalendar: false,
       tripData: {},
-
+      selectDate: date.getToday(),
+      selectAdults:'2',
+      currentMonthYear:[date.getToday()[0], date.getToday()[2]]
     };
     this.getStartInfo = this.getStartInfo.bind(this);
+    this.handleCalendarClick = this.handleCalendarClick.bind(this);
+    this.getTripPrice = this.getTripPrice.bind(this);
   }
 
   componentDidMount() {
@@ -33,13 +37,31 @@ class App extends React.Component {
       });
   }
 
+  getTripPrice(currentDate, adults) {
+    http.fetchPrice('1', currentDate, adults)
+      .then((data) => {
+        console.log(data[0]);
+      })
+  }
+
+  handleCalendarClick() {
+    this.setState({showCalendar: !this.state.showCalendar})
+  }
+
   render() {
     return (
-      <div className={styles.body}>
+      <div className={this.state.showCalendar ? styles.body_dark : styles.body}>
+        <h1>OTHER COMPONENTS RENDER HERE</h1>
         <div className={styles.tourplanner}>
-          <div className="dateheader"><SelectHeader price={this.state.tripData.price} /></div>
+          <div className="dateheader">
+            <SelectHeader 
+              price={this.state.tripData.price}
+              handleCalendarClick={this.handleCalendarClick}
+              selectDate={this.state.selectDate}
+            />
+          </div>
           {this.state.showCalendar
-            ? <div className="plancanlendar"><Calendar /></div>
+            ? <div className="plancanlendar"><Calendar currentMonthYear={this.state.currentMonthYear} /></div>
             : null }
           <div className="tourfooter">
             <PlanFooter

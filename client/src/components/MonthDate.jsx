@@ -5,17 +5,18 @@ import Days from './Days.jsx';
 class MonthDate extends React.Component {
   constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+        };
   }
 
   render() {
     return(
       <div className={styles.container}>
         <div className={styles.month}>
-            <Months/>
+            <Months monthYear={this.props.monthYear}/>
         </div>
         <div className={styles.date}>
-            <Days/>
+            <Days monthYear={this.props.monthYear}/>
         </div>
       </div>
     )

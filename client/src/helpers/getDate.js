@@ -46,4 +46,22 @@ module.exports = {
         return [nextMonth, (Number(currentMonthYear[1]) + 1).toString()]
       }
     },
+
+    getPreviousMonthYear: (currentMonthYear) => {
+      const monthNames = [
+        'Jan', 'Feb', 'Mar',
+        'Apr', 'May', 'Jun',
+        'Jul', 'August', 'Sep',
+        'Oct', 'Nov', 'Dec',
+      ];
+      let prevMonthindex = monthNames.indexOf(currentMonthYear[0]) -1;
+      if(prevMonthindex >= 0) {
+        const prevMonth = monthNames[prevMonthindex];
+        return [prevMonth, currentMonthYear[1]];
+      } else {
+        prevMonthindex = 11;
+        const prevMonth = monthNames[prevMonthindex];
+        return [prevMonth, (Number(currentMonthYear[1]) -1 ).toString()]
+      }
+    }
   }

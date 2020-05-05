@@ -9,7 +9,7 @@ class Month extends React.Component {
   render() {
     return(
       <div className={styles.month_header}>
-        !June 2020
+        {this.props.monthYear[0] + ' ' + this.props.monthYear[1]}
       </div>
     )
   }
