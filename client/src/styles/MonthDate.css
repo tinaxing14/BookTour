@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  height:100%;
+  color: #2c2c2c;
+  font-size:14px;
+  align-items: stretch;
+}
+
+.month {
+  height:10%;
+}
+
+.date {
+  height:90%;
+}

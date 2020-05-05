@@ -26,5 +26,8 @@ module.exports = {
     "linebreak-style": 0,
     "import/extensions": 0,
   },
+  'no-extend-native': [
+    "error", { "exceptions": ["Date"] }
+  ],
   
 };

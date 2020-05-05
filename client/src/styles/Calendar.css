@@ -1,0 +1,19 @@
+.container {
+  display:flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+  margin:0px 0px 20px 0px;
+  height:200px;
+  justify-content: center;
+}
+
+.month_date {
+  width:50%
+}
+
+.line{
+  width:1px;
+  background-color:rgb(226, 226, 226);
+}
+
