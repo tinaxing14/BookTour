@@ -1,5 +1,3 @@
-
-
 module.exports = {
     getCancelationDate: (cancelation) => {
         Date.prototype.monthNames = [
@@ -16,7 +14,7 @@ module.exports = {
         today.setHours(today.getHours() + cancelation);
         return `${today.getMonthName()} ${today.getDate()}`;
     },
-    getDate: () => {
+    getToday: () => {
         Date.prototype.monthNames = [
             'Jan', 'Feb', 'Mar',
             'Apr', 'May', 'Jun',
@@ -27,8 +25,25 @@ module.exports = {
             return this.monthNames[this.getMonth()];
           };
           const today = new Date();
-          return `${today.getMonthName()} ${today.getDate()}`;
+          return [today.getMonthName(), today.getDate(), today.getFullYear()];
 
-    }
-}
+    },
 
+    getNextMonthYear: (currentMonthYear) => {
+      const monthNames = [
+        'Jan', 'Feb', 'Mar',
+        'Apr', 'May', 'Jun',
+        'Jul', 'August', 'Sep',
+        'Oct', 'Nov', 'Dec',
+      ];
+      let nextMonthindex = monthNames.indexOf(currentMonthYear[0]) + 1;
+      if(nextMonthindex < monthNames.length) {
+        const nextMonth = monthNames[nextMonthindex];
+        return [nextMonth, currentMonthYear[1]];
+      } else {
+        nextMonthindex = nextMonthindex % monthNames.length;
+        const nextMonth = monthNames[nextMonthindex];
+        return [nextMonth, (Number(currentMonthYear[1]) + 1).toString()]
+      }
+    },
+  }

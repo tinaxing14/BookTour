@@ -3,11 +3,18 @@
     font-size: medium;
 }
 
+.body_dark{
+  font-family: Arial,sans-serif!important;
+  font-size: medium;
+  background-color:rgba(37, 37, 37, 0.9);
+  height:1000px;
+}
+
 .tourplanner{
     border: 1px solid #e0e0e0;
     border-top: 4px solid #078171;
     width: 25%;
-    min-height: 30%;
+    min-height: 50%;
     height: auto;
     background: #fff;
     box-sizing: border-box;

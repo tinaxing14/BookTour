@@ -9,7 +9,7 @@
 }
 
 .month_date {
-  width:50%
+  width:44%
 }
 
 .line{
@@ -17,3 +17,40 @@
   background-color:rgb(226, 226, 226);
 }
 
+.leftarrow{
+  width: 1.5%;
+  align-self: flex-start;
+  text-align: end;
+  border-radius: 50%;
+  border:2px solid;
+  padding:2px;
+  color: #078171;
+  cursor: pointer;
+}
+
+.rightarrow{
+    width: 1.5%;
+    align-self: flex-start;
+    text-align: start;
+    border-radius: 50%;
+    border:2px solid;
+    padding:2px;
+    color: #078171;
+    cursor: pointer;
+}
+
+.arrowR{
+  border: solid #078171;;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(-45deg);
+}
+
+.arrowL{
+  border: solid #078171;;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(135deg);
+}
