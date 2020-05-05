@@ -1,4 +1,7 @@
 import React from 'react';
+import styles from '../styles/Calendar.css';
+import MonthDate from './MonthDate.jsx'
+
 
 class Calendar extends React.Component {
   constructor(props) {
@@ -6,10 +9,13 @@ class Calendar extends React.Component {
     this.state = {};
   }
 
-
   render() {
     return (
-      <div>Calendar should render here</div>
+      <div className={styles.container}>
+        <div className={styles.month_date}><MonthDate/></div>
+        <div className={styles.line}></div>
+        <div className={styles.month_date}><MonthDate/></div>
+      </div>
     );
   }
 }
