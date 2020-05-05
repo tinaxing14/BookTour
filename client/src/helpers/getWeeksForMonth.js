@@ -1,4 +1,10 @@
 const getWeeksForMonth = (month, year) => {
+  const monthnames = ['Jan', 'Feb', 'Mar',
+  'Apr', 'May', 'Jun',
+  'Jul', 'August', 'Sep',
+  'Oct', 'Nov', 'Dec',]
+
+  month = monthnames.indexOf(month);
   const firstOfMonth = new Date(year, month, 1);
   const firstDayOfWeek = firstOfMonth.getDay();
   const weeks = [[]];
