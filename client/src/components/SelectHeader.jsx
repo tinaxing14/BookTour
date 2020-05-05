@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../styles/SelectHeader.css';
+import date from '../helpers/getDate.js'
 
 class SelectHeader extends React.Component {
   constructor(props) {
@@ -18,14 +19,14 @@ class SelectHeader extends React.Component {
               From
             </div>
             <div className={styles.rate}>
-              $199
+              {'$' + this.props.price}
             </div>
           </div>
         </div>
         <div className={styles.dates_adults_options}>
           <div className={styles.dates_adults_options_btn}>
             <div className={`gg-calendar-dates ${styles.icons}`} />
-            Aug 20
+            {date.getDate()}
           </div>
           <div className={styles.dates_adults_options_btn}>
             <div className={`gg-user-add ${styles.icons}`} />
