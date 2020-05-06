@@ -57,6 +57,10 @@ module.exports = {
     'node_modules',
   ],
 
+  moduleNameMapper: {
+    "\\.(css|sass)$": "identity-obj-proxy",
+  },
+
   // An array of file extensions your modules use
   // moduleFileExtensions: [
   //   "js",
