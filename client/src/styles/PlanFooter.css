@@ -1,0 +1,97 @@
+
+.planfooter{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    align-items: stretch;
+    align-content: stretch;
+    margin: 0px 1em 0px 1em;
+
+}
+
+.updatebtn{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 23px;
+    padding: 8px 16px;
+    text-align: center;
+    background-color: #f2b203;
+    border-color: #f2b203;
+    border-radius: 12px;
+    display: block;
+    height:25px;
+    margin:0% 2% 0% 2%;
+    
+}
+
+.updatebtn:hover {
+    background-color: #f0c757;
+}
+.cancelation{
+    display:flex;
+    align-items: center;
+    margin:10px 0px 0px 1em;
+
+}
+
+.cancelation_btn{
+    background-color: #d33c12;
+    border-radius: 4px;
+    color:#fff;
+    height:25px;
+    width: 120px;
+    font-size: small;
+    text-align: center;
+    line-height: 25px;
+}
+
+.cancelation_term{
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color:#2c2c2c;
+    margin-left:10px;
+    
+}
+
+.popularity{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin:1% 2% 2% 2.5%;
+    padding:1%;
+}
+
+.popularity_number{
+    margin-top: 2px;
+    font-weight: 700;
+    color: #d33c12;
+    font-size: 14px;
+}
+
+
+.popularity_lowprice{
+    font-size: 12px;
+    line-height: 16px;
+    color: #4a4a4a;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.checkicon {
+    margin-top: 3px;
+    color:#2c2c2c;
+    position: absolute;
+    width: 9px;
+    height: 5px;
+    border-bottom: solid 1.5px currentColor;
+    border-left: solid 1.5px currentColor;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+
+

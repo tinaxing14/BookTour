@@ -18,7 +18,7 @@ module.exports = {
   clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  collectCoverage: true,
+  collectCoverage: false,
 
   // The directory where Jest should output its coverage files
   coverageDirectory: 'coverage',
@@ -56,6 +56,10 @@ module.exports = {
   moduleDirectories: [
     'node_modules',
   ],
+
+  moduleNameMapper: {
+    "\\.(css|sass)$": "identity-obj-proxy",
+  },
 
   // An array of file extensions your modules use
   // moduleFileExtensions: [

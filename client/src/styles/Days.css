@@ -1,0 +1,54 @@
+.container { 
+  display:flex;
+  flex-direction: column;
+  color: #2c2c2c;
+  font-size:12px;
+  align-items: stretch;
+  height:100%;
+  margin-top:3%;
+}
+
+.weekday {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 3% 0% 5% 10%;
+  height:10%;
+}
+
+.weeks {
+  display:flex;
+  flex-direction: column;
+  align-items: stretch;
+  height:90%;
+  margin:0% 5% 3% 10%;
+  justify-content: space-evenly;
+}
+
+.days {
+  flex: 1 1 0;
+}
+
+
+.week {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.date{
+  flex:1 1 0;
+  cursor: pointer;
+  text-align: center;
+}
+
+.date_hover{
+  flex:1 1 0;
+  cursor: pointer;
+  text-align: center; 
+}
+
+.date_hover:hover {
+  background-color: #078171;
+}
