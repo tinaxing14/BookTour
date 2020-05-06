@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/Calendar.css';
-import MonthDate from './MonthDate.jsx';
+import MonthDate from "./MonthDate";
 import date from '../helpers/getDate.js';
 
 
