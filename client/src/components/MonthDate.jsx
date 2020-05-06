@@ -2,26 +2,15 @@ import React from 'react';
 import styles from '../styles/MonthDate.css';
 import Months from './Months.jsx';
 import Days from './Days.jsx';
-class MonthDate extends React.Component {
-  constructor(props) {
-        super(props);
-        this.state = {
-        };
-  }
-
-  render() {
-    return(
-      <div className={styles.container}>
-        <div className={styles.month}>
-            <Months monthYear={this.props.monthYear}/>
-        </div>
-        <div className={styles.date}>
-            <Days monthYear={this.props.monthYear}/>
-        </div>
-      </div>
-    )
-  }
-
-}
+const MonthDate = ({ monthYear, handleDayClick }) => (
+  <div className={styles.container}>
+    <div className={styles.month}>
+        <Months monthYear={monthYear}/>
+    </div>
+    <div className={styles.date}>
+        <Days monthYear={monthYear} handleDayClick={handleDayClick}/>
+    </div>
+  </div>
+);
 
 export default MonthDate;
