@@ -18,6 +18,7 @@ class Calendar extends React.Component {
     this.backMonth = this.backMonth.bind(this);
   }
 
+  // month button click handler - use helper function to generate previous and next month
   forwardMonth() {
     const newCurrentMonthYear = date.getNextMonthYear(this.state.nextMonthYear);
     const newNextMonthYear = date.getNextMonthYear(newCurrentMonthYear);
@@ -42,9 +43,9 @@ class Calendar extends React.Component {
     return (
       <div className={styles.container}>
         <div className={styles.leftarrow} onClick={this.backMonth}><i className={styles.arrowL}></i></div>
-        <div className={styles.month_date}><MonthDate monthYear={this.state.currentMonthYear}/></div>
+        <div className={styles.month_date}><MonthDate monthYear={this.state.currentMonthYear} handleDayClick={this.props.handleDayClick}/></div>
         <div className={styles.line}></div>
-        <div className={styles.month_date}><MonthDate monthYear={this.state.nextMonthYear}/></div>
+        <div className={styles.month_date}><MonthDate monthYear={this.state.nextMonthYear} handleDayClick={this.props.handleDayClick}/></div>
         <div className={styles.rightarrow} onClick={this.forwardMonth}><i className={styles.arrowR}></i></div>
       </div>
     );

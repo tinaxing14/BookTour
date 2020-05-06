@@ -43,6 +43,12 @@
   text-align: center;
 }
 
-.date:hover {
+.date_hover{
+  flex:1 1 0;
+  cursor: pointer;
+  text-align: center; 
+}
+
+.date_hover:hover {
   background-color: #078171;
 }
