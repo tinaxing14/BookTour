@@ -1,7 +1,7 @@
 const getWeeksForMonth = (month, year) => {
   const monthnames = ['Jan', 'Feb', 'Mar',
   'Apr', 'May', 'Jun',
-  'Jul', 'August', 'Sep',
+  'Jul', 'Aug', 'Sep',
   'Oct', 'Nov', 'Dec',]
 
   month = monthnames.indexOf(month);

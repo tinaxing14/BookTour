@@ -3,7 +3,7 @@ module.exports = {
         Date.prototype.monthNames = [
           'Jan', 'Feb', 'Mar',
           'Apr', 'May', 'Jun',
-          'Jul', 'August', 'Sep',
+          'Jul', 'Aug', 'Sep',
           'Oct', 'Nov', 'Dec',
         ];
     
@@ -18,7 +18,7 @@ module.exports = {
         Date.prototype.monthNames = [
             'Jan', 'Feb', 'Mar',
             'Apr', 'May', 'Jun',
-            'Jul', 'August', 'Sep',
+            'Jul', 'Aug', 'Sep',
             'Oct', 'Nov', 'Dec',
         ];
         Date.prototype.getMonthName = function () {
@@ -33,7 +33,7 @@ module.exports = {
       const monthNames = [
         'Jan', 'Feb', 'Mar',
         'Apr', 'May', 'Jun',
-        'Jul', 'August', 'Sep',
+        'Jul', 'Aug', 'Sep',
         'Oct', 'Nov', 'Dec',
       ];
       let nextMonthindex = monthNames.indexOf(currentMonthYear[0]) + 1;
@@ -51,7 +51,7 @@ module.exports = {
       const monthNames = [
         'Jan', 'Feb', 'Mar',
         'Apr', 'May', 'Jun',
-        'Jul', 'August', 'Sep',
+        'Jul', 'Aug', 'Sep',
         'Oct', 'Nov', 'Dec',
       ];
       let prevMonthindex = monthNames.indexOf(currentMonthYear[0]) -1;
