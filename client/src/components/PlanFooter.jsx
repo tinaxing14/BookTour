@@ -3,14 +3,26 @@ import React from 'react';
 import styles from '../styles/PlanFooter.css';
 import date from '../helpers/getDate.js';
 
-const PlanFooter = ({ cancelation, totalBooked}) => (
+const PlanFooter = ({ cancelation, totalBooked, showCalendar, showAdults, showOptions, goNext, selectDate}) => {
+  
+  let btnText;
+  if(showAdults || showCalendar) {
+    btnText = 'Next'
+  } else if (showOptions) {
+    btnText = 'Book Now'
+  } else {
+    btnText = 'Check Availability'
+  }
+  return (
   <div className={styles.planfooter}>
-    <div className={styles.updatebtn}>Update</div>
+    <div className={styles.updatebtn} onClick={goNext}>
+      {btnText}
+    </div>
     <div className={styles.cancelation}>
       <div className={styles.cancelation_btn}>Free Cancelation</div>
       <div className={styles.cancelation_term}>
       {`Risk free 100% refund if you cancel by 
-      ${date.getCancelationDate(cancelation)}`}
+      ${date.getCancelationDate(selectDate, cancelation)}`}
       </div>
     </div>
     <div className={styles.popularity}>
@@ -25,6 +37,6 @@ const PlanFooter = ({ cancelation, totalBooked}) => (
       </div>
     </div>
   </div>
-);
+)};
 
 export default PlanFooter;
