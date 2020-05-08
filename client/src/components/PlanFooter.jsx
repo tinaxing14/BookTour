@@ -15,18 +15,17 @@ const PlanFooter = ({ cancelation, totalBooked, showCalendar, showAdults, showOp
   }
   return (
   <div className={styles.planfooter}>
-    <div className={styles.updatebtn} onClick={goNext}>
+    <div data-test='updatebtn' className={styles.updatebtn} onClick={goNext}>
       {btnText}
     </div>
     <div className={styles.cancelation}>
       <div className={styles.cancelation_btn}>Free Cancelation</div>
-      <div className={styles.cancelation_term}>
-      {`Risk free 100% refund if you cancel by 
-      ${date.getCancelationDate(selectDate, cancelation)}`}
+      <div data-test='cancelterm' className={styles.cancelation_term}>
+      {`Risk free 100% refund if you cancel by ${date.getCancelationDate(selectDate, cancelation)}`}
       </div>
     </div>
     <div className={styles.popularity}>
-      <div className={styles.popularity_number}>{`Popular: Booked by ${totalBooked} travelers`}</div>
+      <div data-test='popnum' className={styles.popularity_number}>{`Popular: Booked by ${totalBooked} travelers`}</div>
       <div>
         <span className={styles.checkicon} />
         <span className={styles.popularity_lowprice}>Low Price Guarantee</span>
