@@ -1,0 +1,125 @@
+.container{
+  padding: 16px 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin: 0 6% 10% 6%;;
+  position: relative;
+  cursor: pointer;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.detail{
+  height:70%;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.time{
+  height:20%
+}
+
+.content{
+  width:60%;
+  display:flex;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 14px;
+  line-height: 18px;
+  color: #000a12;
+  font-weight: 700;
+}
+
+.tripdetail{
+  font-size: 14px;
+  line-height: 18px;
+  color: #767676;
+  margin-top: 12px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.price{
+  width:30%;
+  display:flex;
+  flex-direction: column;
+  text-align: right;
+  padding-right:8px;
+}
+
+.total{
+  color: #767676;
+  font-size: 12px;
+  line-height: 16px;
+}
+.dollar{
+  font-size: 20px;
+  line-height: 24px;
+  color: #000a12;
+  font-weight: 700;
+}
+.calculate{
+  font-size: 12px;
+  line-height: 16px;
+  color: #767676;
+  margin-top: 4px;
+}
+
+.check{
+  width:40px;
+  height:40px;
+  margin:18px 0px 0px 10px;
+}
+
+.time{
+  align-self: flex-start;
+  border-color: #000;
+  border-radius: 12px;
+  padding: 10px 16px;
+  background-color: black;
+  color:white;
+  width:22%;
+  text-align: center;
+  height:12%;
+  margin-top: 10px;
+}
+
+.checkmark {
+  display:inline-block;
+  width: 22px;
+  height:22px;
+  -webkit-transform: rotate(45deg); 
+  transform: rotate(45deg);
+}
+
+.checkmark_circle {
+  position: absolute;
+  width:22px;
+  height:22px;
+  background-color:black;
+  border-radius:11px;
+  left:0;
+  top:0;
+}
+
+.checkmark_stem {
+  position: absolute;
+  width:3px;
+  height:9px;
+  background-color:#fff;
+  left:11px;
+  top:6px;
+}
+
+.checkmark_kick {
+  position: absolute;
+  width:3px;
+  height:3px;
+  background-color:#fff;
+  left:8px;
+  top:12px;
+}
