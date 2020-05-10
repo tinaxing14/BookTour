@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../styles/Days.css';
 import getWeeksForMonth from '../helpers/getWeeksForMonth.js';
+import date from '../helpers/getDate.JS';
 
 
 class Days extends React.Component {
@@ -15,14 +16,22 @@ class Days extends React.Component {
     if (day === null) {
         // if day is null, return an empty div
         return (<div key={index} className={styles.date}></div>)
-    } else {
+    } else if (!date.isBeforeToday(day)){
         return (
-        // else return a div with the day
+        // else if day is not before today return a div with the day and click handler
         <div key={index} 
-             className={`${styles.date} ${styles.date_hover}`} 
+             className={date.isToday(day) ? `${styles.date_today} ${styles.date_hover}` : `${styles.date} ${styles.date_hover}`} 
              onClick={()=> { this.props.handleDayClick(day.getDate(),...this.props.monthYear)}}>
         {day.getDate()}
         </div>)
+    } else {
+        // else return a div with the day greyed out
+      return (
+        <div key={index} 
+             className={`${styles.date} ${styles.date_greyout}`}>
+        {day.getDate()}
+        </div>
+      )
     }
   }
 
