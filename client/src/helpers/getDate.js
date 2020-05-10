@@ -86,4 +86,17 @@ module.exports = {
       }
       return selectDate[2] + monthStr + dateNum;
     },
+
+    isToday: (date) => {
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const day = date.getDate();
+      const today = new Date();
+      return year === today.getFullYear() && month === today.getMonth() && day === today.getDate();
+    },
+
+    isBeforeToday: (date) => {
+      return new Date(date.toDateString()) < new Date(new Date().toDateString());
+    }
+
 }
