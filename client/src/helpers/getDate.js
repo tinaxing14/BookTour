@@ -41,7 +41,7 @@ module.exports = {
       } else {
         nextMonthindex = nextMonthindex % monthNames.length;
         const nextMonth = monthNames[nextMonthindex];
-        return [nextMonth, (Number(currentMonthYear[1]) + 1).toString()]
+        return [nextMonth, (Number(currentMonthYear[1]) + 1)]
       }
     },
 
@@ -59,7 +59,7 @@ module.exports = {
       } else {
         prevMonthindex = 11;
         const prevMonth = monthNames[prevMonthindex];
-        return [prevMonth, (Number(currentMonthYear[1]) -1 ).toString()]
+        return [prevMonth, (Number(currentMonthYear[1]) -1 )]
       }
     },
 
