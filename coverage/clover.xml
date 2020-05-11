@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1589164192969" clover="3.2.0">
-  <project timestamp="1589164192969" name="All files">
+<coverage generated="1589218623767" clover="3.2.0">
+  <project timestamp="1589218623768" name="All files">
     <metrics statements="220" coveredstatements="215" conditionals="63" coveredconditionals="57" methods="53" coveredmethods="49" elements="336" coveredelements="321" complexity="0" loc="220" ncloc="220" packages="5" files="16" classes="16"/>
     <package name="client.src">
       <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
@@ -97,9 +97,9 @@
         <line num="16" count="168" type="cond" truecount="2" falsecount="0"/>
         <line num="18" count="44" type="stmt"/>
         <line num="19" count="124" type="cond" truecount="2" falsecount="0"/>
-        <line num="20" count="88" type="stmt"/>
+        <line num="20" count="84" type="stmt"/>
         <line num="24" count="2" type="stmt"/>
-        <line num="29" count="36" type="stmt"/>
+        <line num="29" count="40" type="stmt"/>
         <line num="39" count="4" type="stmt"/>
         <line num="43" count="4" type="stmt"/>
         <line num="46" count="28" type="stmt"/>
@@ -183,11 +183,11 @@
         <line num="83" count="4" type="stmt"/>
         <line num="85" count="3" type="stmt"/>
         <line num="87" count="7" type="stmt"/>
-        <line num="91" count="88" type="stmt"/>
-        <line num="92" count="88" type="stmt"/>
-        <line num="93" count="88" type="stmt"/>
-        <line num="94" count="88" type="stmt"/>
-        <line num="95" count="88" type="cond" truecount="3" falsecount="0"/>
+        <line num="91" count="84" type="stmt"/>
+        <line num="92" count="84" type="stmt"/>
+        <line num="93" count="84" type="stmt"/>
+        <line num="94" count="84" type="stmt"/>
+        <line num="95" count="84" type="cond" truecount="3" falsecount="0"/>
         <line num="99" count="124" type="stmt"/>
       </file>
       <file name="getWeeksForMonth.js" path="/Users/TinaXING/Desktop/Hackreactor/tripadvisor-traveler-booking/client/src/helpers/getWeeksForMonth.js">
