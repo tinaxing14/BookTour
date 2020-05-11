@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
 import PlanFooter from '../client/src/components/PlanFooter.jsx';
 import styles from '../client/src/styles/PlanFooter.css';
 

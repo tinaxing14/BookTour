@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import SelectHeader from '../client/src/components/SelectHeader.jsx';
 import styles from '../client/src/styles/SelectHeader.css';
 
@@ -8,17 +7,23 @@ const samplePrice = 189;
 const sampleSelectDate = ['Aug', 23, 2020];
 const sampleSelectAdults = 3;
 const mockHandleCalendarClick = jest.fn();
+const mockHandleAdultsClick = jest.fn();
+const mockHandleOptionsClick = jest.fn();
 describe('Tests for SelectHeader Component', () => {
   beforeEach(() => {
-    wrapper = shallow(<SelectHeader price={samplePrice} selectDate={sampleSelectDate} selectAdults={sampleSelectAdults} handleCalendarClick={mockHandleCalendarClick}/>);
+    wrapper = shallow(
+    <SelectHeader 
+    price={samplePrice} 
+    selectDate={sampleSelectDate} 
+    selectAdults={sampleSelectAdults} 
+    handleCalendarClick={mockHandleCalendarClick} 
+    handleAdultsClick={mockHandleAdultsClick}
+    handleOptionsClick={mockHandleOptionsClick}
+    />);
   });
 
   test('should render correct price', ()=> {
     expect(wrapper.find("[data-test='price']").text()).toBe('$189');
-  });
-
-  test('should render three buttons on the page', () => {
-    expect(wrapper.find("[data-test='optionsButton']")).toHaveLength(3);
   });
 
   test('should render the correct date', () => {
@@ -34,8 +39,18 @@ describe('Tests for SelectHeader Component', () => {
   });
 
   test('should invoke function handleCalendarClick when the first button is clicked', ()=> {
-    wrapper.find("[data-test='handleClick']").simulate('click');
+    wrapper.find("[data-test='handleCalendarClick']").simulate('click');
     expect(mockHandleCalendarClick).toHaveBeenCalled();
-  })
+  });
 
-})
+  test('should invoke function handleAdultsClick when second button is clicked', () => {
+    wrapper.find("[data-test='handleAdultsClick']").simulate('click');
+    expect(mockHandleAdultsClick).toHaveBeenCalled();
+  });
+
+  test('should invoke function handleOptionsClick when second button is clicked', () => {
+    wrapper.find("[data-test='handleOptionsClick']").simulate('click');
+    expect(mockHandleOptionsClick).toHaveBeenCalled();
+  });
+
+});
