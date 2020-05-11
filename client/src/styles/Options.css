@@ -10,6 +10,7 @@
   flex-direction: column;
   box-shadow: 0 5px 10px #00000044;
   transition: 0.5s;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container:hover{
