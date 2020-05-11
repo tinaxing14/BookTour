@@ -29,14 +29,14 @@
 }
 
 .rightarrow{
-    width: 1.5%;
-    align-self: flex-start;
-    text-align: start;
-    border-radius: 50%;
-    border:2px solid;
-    padding:2px;
-    color: #078171;
-    cursor: pointer;
+  width: 1.5%;
+  align-self: flex-start;
+  text-align: start;
+  border-radius: 50%;
+  border:2px solid;
+  padding:2px;
+  color: #078171;
+  cursor: pointer;
 }
 
 .arrowR{

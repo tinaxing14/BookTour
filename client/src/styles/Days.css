@@ -54,6 +54,7 @@
   flex:1 1 0;
   cursor: pointer;
   text-align: center; 
+  transition:0.5s;
 }
 
 .date_hover:hover {
