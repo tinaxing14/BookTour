@@ -1,5 +1,4 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import Calendar from '../client/src/components/Calendar.jsx';
 import styles from '../styles/Calendar.css';
 import MonthDate from '../client/src/components/MonthDate.jsx';

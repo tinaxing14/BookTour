@@ -1,47 +1,47 @@
 import React from 'react';
 import styles from '../styles/SelectHeader.css';
 
-class SelectHeader extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-
-
-  render() {
-    return (
-      <div className={styles.header}>
+const SelectHeader = ({price, selectDate, selectAdults, handleCalendarClick, showAdults, showOptions, showCalendar, handleAdultsClick, handleOptionsClick}) => (
+  <div className={styles.header}>
         <div className={styles.header_price}>
           <div className={styles.date_travelers}>Select Date and Travelers</div>
           <div className={styles.from_rate}>
             <div className={styles.from}>
               From
             </div>
-            <div className={styles.rate}>
-              {'$' + this.props.price}
+            <div data-test='price' className={styles.rate}>
+              {'$' + price}
             </div>
           </div>
         </div>
-        <div className={styles.dates_adults_options}>
-          <div className={styles.dates_adults_options_btn} onClick={this.props.handleCalendarClick}>
+        <div data-test='optionsButton'className={styles.dates_adults_options}>
+          <div data-test='handleCalendarClick' 
+            className={showCalendar 
+            ? styles.dates_adults_options_btn_change 
+            : styles.dates_adults_options_btn} onClick={handleCalendarClick}
+          >
             <div className={`gg-calendar-dates ${styles.icons}`}/>
-            {this.props.selectDate[0] + ' ' + this.props.selectDate[1]}
+            <span data-test='date'>{selectDate[0] + ' ' + selectDate[1]}</span>
           </div>
-          <div className={styles.dates_adults_options_btn}>
+          <div data-test='handleAdultsClick' 
+            className={showAdults 
+            ? styles.dates_adults_options_btn_change 
+            : styles.dates_adults_options_btn} onClick={handleAdultsClick}
+          >
             <div className={`gg-user-add ${styles.icons}`} />
-            2 adults
+            <span data-test='adults'>{selectAdults + '  Adults'}</span>
           </div>
-          <div className={styles.dates_adults_options_btn}>
+          <div data-test='handleOptionsClick' 
+            className={showOptions 
+            ? styles.dates_adults_options_btn_change 
+            : styles.dates_adults_options_btn} onClick={handleOptionsClick}
+          >
             <div className={`gg-awards ${styles.icons}`} />
-            Options
+            <span data-test='options'>Options</span>
           </div>
         </div>
       </div>
-    );
-  }
-}
 
+)
 
 export default SelectHeader;

@@ -6,11 +6,8 @@ module.exports = {
     try {
       const sql = `select tripname, detail, duration, cancelation, totalbooked, price, trip_availability from trips, prices where trip_date = "${date}" and trips.id = "${tripId}"`;
       const results = await DB.queryAsync(sql);
-      if (results[0].trip_availability < adults) {
-        callback(null, 'trip not available');
-      } else {
-        callback(null, results);
-      }
+      results[0].trip_availability = results[0].trip_availability - adults;
+      callback(null, results);
     } catch (err) {
       callback(err);
     }
@@ -20,11 +17,8 @@ module.exports = {
     try {
       const sql = `select tripname, detail, duration, cancelation, totalbooked, price, trip_availability from trips, prices where trip_date = "${date}" and trips.id = "${tripId}"`;
       const results = await DB.queryAsync(sql);
-      if (results[0].trip_availability <= 0) {
-        callback(null, 'trip not available');
-      } else {
-        callback(null, results);
-      }
+      results[0].trip_availability = results[0].trip_availability - 2;
+      callback(null, results);
     } catch (err) {
       callback(err);
     }

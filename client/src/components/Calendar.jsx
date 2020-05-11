@@ -39,7 +39,6 @@ class Calendar extends React.Component {
   }
 
   render() {
-    const nextMonthYear=this.props.currentMonthYear
     return (
       <div className={styles.container}>
         <div className={styles.leftarrow} onClick={this.backMonth}><i className={styles.arrowL}></i></div>

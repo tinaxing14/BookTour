@@ -27,11 +27,8 @@ describe('Check controller getTripdata method', () => {
       const req = mockRequest();
       req.params.id = '1';
       const res = mockResponse();
-      await controller.getTripDataAsync(req, res);
+      await controller.getTripData(req, res);
       expect(res.json).toHaveBeenCalled();
-      expect(res.json).toHaveBeenCalledWith([{
-        tripname: 'Yosemite in a Day', detail: '6:00 am Departure - Yosemite in a Day Tour from San Francisco\nPickup included', duration: '6:00 am Departure - 6:00 AM', cancelation: 24, totalbooked: 3987, price: 199, trip_availability: 20,
-      }]);
     } catch (err) {
       console.log(err);
     }
@@ -41,7 +38,7 @@ describe('Check controller getTripdata method', () => {
       const req = mockRequest();
       req.params.id = null;
       const res = mockResponse();
-      await controller.getTripDataAsync(req, res);
+      await controller.getTripData(req, res);
       expect(res.json).toHaveBeenCalledTimes(0);
       expect(res.status).toHaveBeenCalledWith(500);
     } catch (err) {
@@ -58,10 +55,10 @@ describe('Check controller getPrice method', () => {
       req.query.startdate = '20200515';
       req.query.adults = '2';
       const res = mockResponse();
-      await controller.getPriceAsync(req, res);
+      await controller.getPrice(req, res);
       expect(res.json).toHaveBeenCalled();
       expect(res.json).toHaveBeenCalledWith([{
-        tripname: 'Yosemite in a Day', detail: '6:00 am Departure - Yosemite in a Day Tour from San Francisco\nPickup included', duration: '6:00 am Departure - 6:00 AM', cancelation: 24, totalbooked: 3987, price: 169, trip_availability: 40,
+        tripname: 'Yosemite in a Day', detail: '6:00 am Departure - Yosemite in a Day Tour from San Francisco\nPickup included', duration: '6:00 am Departure - 6:00 AM', cancelation: 24, totalbooked: 3987, price: 169, trip_availability: 38,
       }]);
     } catch (err) {
       console.log(err);
@@ -74,7 +71,7 @@ describe('Check controller getPrice method', () => {
       req.query.startdate = '2020';
       req.query.adults = '2';
       const res = mockResponse();
-      await controller.getPriceAsync(req, res);
+      await controller.getPrice(req, res);
       expect(res.json).toHaveBeenCalledTimes(0);
       expect(res.status).toHaveBeenCalledWith(500);
     } catch (err) {

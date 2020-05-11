@@ -41,14 +41,32 @@
   flex:1 1 0;
   cursor: pointer;
   text-align: center;
+  width:10px;
+  height:22px;
+  line-height: 25px;
+}
+
+.date_greyout {
+  color:rgb(196, 196, 196);
 }
 
 .date_hover{
   flex:1 1 0;
   cursor: pointer;
   text-align: center; 
+  transition:0.5s;
 }
 
 .date_hover:hover {
   background-color: #078171;
+}
+
+.date_today{
+  background-color: #b6f0e8;
+  flex:1 1 0;
+  cursor: pointer;
+  text-align: center;
+  width:10px;
+  height:22px;
+  line-height: 25px;
 }
