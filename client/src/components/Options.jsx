@@ -26,7 +26,7 @@ class Options extends React.Component{
         <div className={styles.content}>
           <div data-test='tripDuration' className={styles.title}>{tripData.duration}</div>
           <div data-test='tripDetail' className={this.state.contentWrap}>{tripData.detail}</div>
-          {this.state.readmore ? null : <div onClick={this.toggleRead} className={styles.read}>Read More</div>}
+          {this.state.readmore ? null : <div data-test='toggle' onClick={this.toggleRead} className={styles.read}>Read More</div>}
         </div>
         <div className={styles.price}>
           <div className={styles.total}>Total</div>
