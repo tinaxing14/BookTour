@@ -29,9 +29,6 @@ describe('Check controller getTripdata method', () => {
       const res = mockResponse();
       await controller.getTripData(req, res);
       expect(res.json).toHaveBeenCalled();
-      expect(res.json).toHaveBeenCalledWith([{
-        tripname: 'Yosemite in a Day', detail: '6:00 am Departure - Yosemite in a Day Tour from San Francisco\nPickup included', duration: '6:00 am Departure - 6:00 AM', cancelation: 24, totalbooked: 3987, price: 169, trip_availability: 18,
-      }]);
     } catch (err) {
       console.log(err);
     }
