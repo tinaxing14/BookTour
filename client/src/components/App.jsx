@@ -56,7 +56,6 @@ class App extends React.Component {
     this.setState({spinner: true});
     http.fetchPrice('1', currentDate, adults)
       .then((data) => {
-        console.log(data[0]);
         this.setState({ tripData: data[0]});
         setTimeout(() => {
           this.setState({spinner: false})
