@@ -15,15 +15,27 @@ const SelectHeader = ({price, selectDate, selectAdults, handleCalendarClick, sho
           </div>
         </div>
         <div data-test='optionsButton'className={styles.dates_adults_options}>
-          <div data-test='handleClick' className={showCalendar ? styles.dates_adults_options_btn_change : styles.dates_adults_options_btn} onClick={handleCalendarClick}>
+          <div data-test='handleCalendarClick' 
+            className={showCalendar 
+            ? styles.dates_adults_options_btn_change 
+            : styles.dates_adults_options_btn} onClick={handleCalendarClick}
+          >
             <div className={`gg-calendar-dates ${styles.icons}`}/>
             <span data-test='date'>{selectDate[0] + ' ' + selectDate[1]}</span>
           </div>
-          <div data-test='optionsButton' className={showAdults ? styles.dates_adults_options_btn_change : styles.dates_adults_options_btn} onClick={handleAdultsClick}>
+          <div data-test='handleAdultsClick' 
+            className={showAdults 
+            ? styles.dates_adults_options_btn_change 
+            : styles.dates_adults_options_btn} onClick={handleAdultsClick}
+          >
             <div className={`gg-user-add ${styles.icons}`} />
             <span data-test='adults'>{selectAdults + '  Adults'}</span>
           </div>
-          <div data-test='optionsButton' className={showOptions ? styles.dates_adults_options_btn_change : styles.dates_adults_options_btn} onClick={handleOptionsClick}>
+          <div data-test='handleOptionsClick' 
+            className={showOptions 
+            ? styles.dates_adults_options_btn_change 
+            : styles.dates_adults_options_btn} onClick={handleOptionsClick}
+          >
             <div className={`gg-awards ${styles.icons}`} />
             <span data-test='options'>Options</span>
           </div>
