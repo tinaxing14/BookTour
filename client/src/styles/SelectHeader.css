@@ -59,9 +59,6 @@
 
 }
 
-.dates_adults_options_btn:hover {
-  background-color: #f3f1f1
-}
 
 .dates_adults_options_btn{
     cursor:pointer;
@@ -74,8 +71,28 @@
     flex-basis: 50%;
     vertical-align: center;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 2px;
     display:flex;
+}
+
+.dates_adults_options_btn:hover {
+  background-color: #f3f1f1
+}
+
+.dates_adults_options_btn_change {
+  border: 1px solid #078171;
+  border-top: 3px solid #078171;
+  cursor:pointer;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: 700;
+  flex-grow: 1;
+  margin: 0 4px;
+  flex-basis: 50%;
+  vertical-align: center;
+  text-align: center;
+  border-radius: 2px;
+  display:flex;
 }
 
 .icons{

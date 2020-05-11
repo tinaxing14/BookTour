@@ -8,7 +8,14 @@
   height: 150px;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 5px 10px #00000044;
+  transition: 0.5s;
 }
+
+.container:hover{
+  box-shadow: 0 10px 15px black;
+}
+
 
 .detail{
   height:70%;
@@ -36,11 +43,29 @@
 
 .tripdetail{
   font-size: 14px;
-  line-height: 18px;
+  line-height: 20px;
   color: #767676;
   margin-top: 12px;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  overflow: hidden;
+  height:20px;
+  transition-property: height;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+}
+
+.tripdetail_change{
+  font-size: 14px;
+  line-height: 20px;
+  color: #767676;
+  margin-top: 12px;
+  height:auto;
+
+}
+
+.read{
+  font-size: 12px;
+  margin-top: 5px;
+  text-decoration: underline;
 }
 
 .price{
