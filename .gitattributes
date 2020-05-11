@@ -1,1 +1,2 @@
 *.jsx linguist-language=Javascript
+client/dist/* linguist-documentation  
