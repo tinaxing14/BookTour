@@ -170,7 +170,7 @@ class App extends React.Component {
 
     return (
       <div className={this.state.showCalendar || this.state.showAdults || this.state.showOptions ? styles.body_dark : styles.body}>
-        <h1>OTHER COMPONENTS RENDER HERE</h1>
+
         <div className={styles.tourplanner}>
           <div>
             <SelectHeader 
