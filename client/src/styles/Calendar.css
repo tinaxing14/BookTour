@@ -18,25 +18,25 @@
 }
 
 .leftarrow{
-  width: 1.5%;
+  width: 2%;
   align-self: flex-start;
   text-align: end;
   border-radius: 50%;
-  border:2px solid;
   padding:2px;
+  border:none;
   color: #078171;
   cursor: pointer;
 }
 
 .rightarrow{
-  width: 1.5%;
+  width: 2%;
   align-self: flex-start;
   text-align: start;
   border-radius: 50%;
-  border:2px solid;
-  padding:2px;
+  border:none;
   color: #078171;
   cursor: pointer;
+  padding:2px;
 }
 
 .arrowR{
@@ -45,6 +45,7 @@
   display: inline-block;
   padding: 2px;
   transform: rotate(-45deg);
+  position: relative;
 }
 
 .arrowL{
@@ -53,4 +54,5 @@
   display: inline-block;
   padding: 2px;
   transform: rotate(135deg);
+  position: relative;
 }
