@@ -3,6 +3,8 @@
   font-size: medium;
   height:100%;
   width:100%;
+  padding-left: 55%;
+  padding-top:6%;
 }
 
 .body_dark{
@@ -13,16 +15,16 @@
   position: fixed;
   left: 0;
   top: 0;
-  padding-left: 60%;
+  padding-left: 55%;
   padding-top:6%;
 }
 
 .tourplanner{
   border: 1px solid #e0e0e0;
   border-top: 4px solid #078171;
-  min-width: 420px;
-  width:500px;
-  min-height: 450px;
+  min-width: 400px;
+  width:450px;
+  min-height: 420px;
   height: auto;
   background: #fff;
   box-sizing: border-box;
