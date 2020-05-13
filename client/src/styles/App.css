@@ -13,7 +13,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  padding-left: 50%;
+  padding-left: 60%;
   padding-top:6%;
 }
 
@@ -21,8 +21,8 @@
   border: 1px solid #e0e0e0;
   border-top: 4px solid #078171;
   min-width: 420px;
-  width:600px;
-  min-height: 500px;
+  width:500px;
+  min-height: 450px;
   height: auto;
   background: #fff;
   box-sizing: border-box;
