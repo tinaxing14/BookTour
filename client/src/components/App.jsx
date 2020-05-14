@@ -56,11 +56,6 @@ class App extends React.Component {
     this.setState({spinner: true});
     http.fetchPrice('1', currentDate, adults)
       .then((data) => {
-<<<<<<< HEAD
-        this.setState({ tripData: data[0]},         setTimeout(() => {
-          this.setState({spinner: false})
-        }, 2000));
-=======
         this.setState({ tripData: data[0]}, () => {
           setTimeout(() => {
             this.setState({spinner: false})
@@ -69,7 +64,6 @@ class App extends React.Component {
       })
       .catch((err) => {
         console.log(err);
->>>>>>> docker
       })
   }
 
