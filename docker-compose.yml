@@ -1,0 +1,26 @@
+version: '3'
+services:
+  web:
+    container_name: travelerweb
+    image: tripadvisorbooking
+    build: .
+    ports:
+      - 3000:3000
+    depends_on:
+      - 'db'
+    links:
+      - 'db'
+    restart: always
+    
+  db:
+    container_name: travelerdb
+    image: tripadvisorsql
+    build: './db'
+    restart: always
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    
+
+
