@@ -1,3 +1,5 @@
+const CompressionPlugin = require('compression-webpack-plugin');
+const WebpackBundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const path = require('path');
 
 const SRC_DIR = path.join(__dirname, '/client/src');
@@ -10,13 +12,13 @@ module.exports = {
     path: DIST_DIR,
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?/,
         include: SRC_DIR,
         loader: 'babel-loader',
         query: {
-          presets: ['react', 'env'],
+          presets: ['@babel/preset-env', '@babel/preset-react'],
         },
       },
       {
@@ -36,4 +38,5 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+
 };
