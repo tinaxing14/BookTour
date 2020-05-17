@@ -8,12 +8,14 @@ The user is able to click on the booking calendar, choose a tour date, check the
 ## Getting Started
 Before you start, please have mysql database downloaded and create a config.js file in db folder, edit the password to your password:
 example_config file 
-'module.exports = {
+'
+module.exports = {
   host: 'localhost',
   user: 'root',
   password: 'password_here',
   database: 'trip_booking',
-};'
+};
+'
 
 To download dependencies:
 'npm install'
