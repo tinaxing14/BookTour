@@ -3,7 +3,7 @@
 
 A tour trip booking module built with React, ExpressJS and mysql database.
 
-The user is able to click on the booking calendar, choose a tour date, and check the availability and price.
+The user is able to click on a booking calendar, choose a tour date, and check the availability and price.
 
 ## Getting Started
 Before you start, please have mysql database downloaded and create a config.js file in db folder,
@@ -33,13 +33,13 @@ npm run start
 ```
 
 ## Demo of the module
-When the page first loaded, you should see a booking module and click on the calendar.
+When the page first loaded, you should see a booking module and be able to click on the calendar.
 The default chosen date is current date and past dates are greyed out.
 
 ![Choose Date](https://media.giphy.com/media/XfmPSh7pDOiXXfGSmR/giphy.gif)
 
 
-When you click on a date, you will see the page to choose traveler count and then see the total price and availability.
+When you click on a date, you will see the page to choose traveler count and then check the total price and availability.
 
 ![Choose Traveler](https://media.giphy.com/media/gKZse44KJN63yxtFEY/giphy.gif)
 
