@@ -10,7 +10,7 @@ const DIST_DIR = path.join(__dirname, '/client/dist');
 module.exports = {
   mode: 'production',
   optimization: {
-    minimizer:[new TerserPlugin()]
+    minimizer:[new TerserPlugin()],
   },
   entry: `${SRC_DIR}/index.jsx`,
   output: {
@@ -45,9 +45,12 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
   plugins: [
-    new webpack.DefinePlugin({'process.env.NODE_ENV':JSON.stringify('production')},
-  ),
-  new WebpackBundleAnalyzer(),
+    new webpack.DefinePlugin({'process.env.NODE_ENV':JSON.stringify('production')}),
+    new CompressionPlugin(),
+  // new WebpackBundleAnalyzer(),
   ]
 
 };
+
+//webpack -d --watch dev mode
+//webpack -p --watch pro mode
