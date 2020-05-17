@@ -18,7 +18,9 @@ module.exports = {
 '
 
 To download dependencies:
-'npm install'
+'''
+npm install
+'''
 
 To seed database:
 'npm seed'
