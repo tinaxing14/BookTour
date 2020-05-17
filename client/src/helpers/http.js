@@ -1,9 +1,9 @@
-const axios = require('axios');
+const { get } = require('axios');
 
 module.exports = {
-  fetchTripData: (id) => axios.get(`/api/trip/${id}/price`)
+  fetchTripData: (id) => get(`/api/trip/${id}/price`)
     .then((response) => response.data),
 
-  fetchPrice: (id, date, adults) => axios.get(`/api/trip/${id}/calendar/?startdate=${date}&enddate=${date}&adults=${adults}`)
+  fetchPrice: (id, date, adults) => get(`/api/trip/${id}/calendar/?startdate=${date}&enddate=${date}&adults=${adults}`)
     .then((response) => response.data),
 };
