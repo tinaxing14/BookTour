@@ -71,9 +71,8 @@ Express Proxy server to serve all team modules:
 - https://github.com/tinaxing14/BookTour-Proxy-Server
 
 Team Modules:
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo```
+  - https://github.com/NoStepOnSnake/tripadvisor-reviews-server
+  - https://github.com/NoStepOnSnake/tripadvisor-gallery-server
+  - https://github.com/NoStepOnSnake/tripadvisor-itenerary-server
 
 
