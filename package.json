@@ -14,7 +14,7 @@
     "build-docker": "bash buildDocker.bash"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "babel-loader": "^8.1.0",
     "babel-polyfill": "^6.26.0",
     "bluebird": "^3.7.2",
